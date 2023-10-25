@@ -1,10 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { IqairService } from './iqair.service';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigService } from '@nestjs/config';
 import { HttpModule } from '@nestjs/axios';
 import { IqairRepository } from './iqair.repository';
-import { PrismaModule } from '../../prisma/prisma.module';
-import { PrismaService } from '../../prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 
 describe('IqairService', () => {
   let service: IqairService;

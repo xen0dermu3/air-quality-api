@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from '../../prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { CreateIqairDto } from './dto/create-iqair.dto';
 import { Prisma } from '@prisma/client';
 import { Root } from './interfaces';

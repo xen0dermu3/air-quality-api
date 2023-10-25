@@ -17,7 +17,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "test:e2e": "NODE_ENV=development dotenv -e .env.development -- jest --forceExit --config ./test/jest-e2e.json",
+    "test:int": "dotenv -e .env.test -- jest -i --no-cache --config jest-int.json",
     "migrate": "dotenv -e .env.development -- prisma migrate dev"
   },
   "dependencies": {

@@ -2,11 +2,11 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { IqairController } from './iqair.controller';
 import { IqairService } from './iqair.service';
 import { ConfigService } from '@nestjs/config';
-import { HttpModule, HttpService } from '@nestjs/axios';
+import { HttpService } from '@nestjs/axios';
 import { IqairRepository } from './iqair.repository';
-import { PrismaService } from '../../prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { of } from 'rxjs';
-import { BadRequestException, INestApplication } from '@nestjs/common';
+import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 
 describe('IqairController', () => {
