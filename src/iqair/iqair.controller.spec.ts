@@ -52,6 +52,7 @@ describe('IqairController', () => {
             pollution: {
               ts: date,
               aqius: 10,
+              aqicn: 10,
               mainus: '',
               maincn: '',
             },
@@ -65,6 +66,7 @@ describe('IqairController', () => {
         'Pollution': {
           ts: date,
           aqius: 10,
+          aqicn: 10,
           mainus: '',
           maincn: '',
         },

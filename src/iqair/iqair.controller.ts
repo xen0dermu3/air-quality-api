@@ -29,11 +29,11 @@ export class IqairController {
       {
         Result: {
           Pollution: {
-            ts: 2023-10-24T15:00:00.000Z,
+            ts: '2023-10-24T15:00:00.000Z',
             aqicn: 26,
             aqius: 26,
-            maincn: p1,
-            mainus: o3
+            maincn: 'p1',
+            mainus: 'o3'
           }
         }
       }
@@ -50,6 +50,7 @@ export class IqairController {
           ts: pollution?.ts ?? '',
           aqius: pollution?.aqius ?? '',
           mainus: pollution?.mainus ?? '',
+          aqicn: pollution?.aqicn ?? '',
           maincn: pollution?.maincn ?? '',
         },
       },
