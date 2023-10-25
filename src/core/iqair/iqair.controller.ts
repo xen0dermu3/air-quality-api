@@ -11,7 +11,7 @@ export class IqairController {
   @Get('nearest-city-air-quality')
   @ApiQuery({ name: 'longitude', required: false, type: String, example: '2.352222' })
   @ApiQuery({ name: 'latitude', required: false, type: String, example: '48.856613' })
-  async getAirQualityOfNearestCity(@Query('longitude') longitude: string, @Query('latitude') latitude: string) {
+  async getAirQualityOfNearestCity(@Query('longitude') longitude?: string, @Query('latitude') latitude?: string) {
     const data = await this.iqairService.getAirQualityOfNearestCity(latitude, longitude);
 
     const pollution = data?.data?.current?.pollution;
@@ -19,10 +19,10 @@ export class IqairController {
     return {
       'Result': {
         'Pollution': {
-          ts: pollution?.ts,
-          aqius: pollution?.aqius,
-          mainus: pollution?.mainus,
-          maincn: pollution?.maincn,
+          ts: pollution?.ts ?? '',
+          aqius: pollution?.aqius ?? '',
+          mainus: pollution?.mainus ?? '',
+          maincn: pollution?.maincn ?? '',
         },
       },
     };

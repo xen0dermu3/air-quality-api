@@ -43,7 +43,7 @@ export class IqairService {
     );
 
     if (data.status !== 'success') {
-      throw new BadRequestException(`Got status = "${data.status} from API"`);
+      throw new BadRequestException(`Got status = "${data.status}" from API`);
     }
 
     return data;
